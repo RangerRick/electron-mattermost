@@ -21,7 +21,10 @@ var loadDefault = function(version) {
   switch (version) {
     case 1:
       return {
-        teams: [],
+        teams: [{
+          name: "OpenNMS",
+          url: "https://chat.opennms.com/"
+        }],
         hideMenuBar: false,
         showTrayIcon: false,
         trayIconTheme: '',

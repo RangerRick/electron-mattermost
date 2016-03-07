@@ -206,7 +206,7 @@ function makePackage(platform, arch, callback) {
     prune: true,
     overwrite: true,
     "app-version": packageJson.version,
-    icon: 'resources/icon',
+    icon: 'resources/opennms',
     "version-string": {
       CompanyName: distPackageAuthor,
       LegalCopyright: `Copyright (c) 2015 - ${new Date().getFullYear()} ${packageJson.author.name}`,
@@ -215,7 +215,8 @@ function makePackage(platform, arch, callback) {
       ProductVersion: packageJson.version,
       ProductName: packageJson.productName,
       InternalName: packageJson.name
-    }
+    },
+    sign: '3rd Party Mac Developer Application: The OpenNMS Group, Inc. (N7VNY4MNDW)'
   }, function(err, appPath) {
     if (err) {
       callback(err);

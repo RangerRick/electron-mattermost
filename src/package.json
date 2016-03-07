@@ -1,9 +1,9 @@
 {
-  "name": "mattermost",
-  "productName": "Mattermost",
-  "desktopName": "Mattermost.desktop",
-  "version": "3.4.0",
-  "description": "Mattermost Desktop application for Windows, Mac and Linux",
+  "name": "opennms-chat",
+  "productName": "OpenNMS Chat",
+  "desktopName": "OpenNMS.desktop",
+  "version": "3.4.0+1.0.0",
+  "description": "Mattermost desktop application for OpenNMS chat",
   "main": "main.js",
   "author": {
     "name": "Yuya Ochiai",
