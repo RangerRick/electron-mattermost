@@ -216,7 +216,7 @@ function makePackage(platform, arch, callback) {
       ProductName: packageJson.productName,
       InternalName: packageJson.name
     },
-    sign: '3rd Party Mac Developer Application: The OpenNMS Group, Inc. (N7VNY4MNDW)'
+    'osx-sign': '3rd Party Mac Developer Application: The OpenNMS Group, Inc. (N7VNY4MNDW)'
   }, function(err, appPath) {
     if (err) {
       callback(err);

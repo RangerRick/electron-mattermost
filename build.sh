@@ -20,11 +20,11 @@ npm run package:all
 
 echo "* creating dist archive(s)"
 pushd release
-	for dir in opennms-chat-darwin* opennms-chat-win32*; do
-		zip -9 -r $dir.zip $dir
+	for dir in *-darwin* *-win32*; do
+		zip -9 -r "$dir.zip" "$dir"
 	done
-	for dir in opennms-chat-linux*; do
-		tar -cvzf $dir.tar.gz $dir
+	for dir in *-linux*; do
+		tar -cvzf "$dir.tar.gz" "$dir"
 	done
 	rsync -avzr --progress *.zip *.tar.gz ranger@www.opennms.org:/var/www/sites/opennms.org/site/www/mattermost/
 popd dist
