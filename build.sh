@@ -26,6 +26,17 @@ pushd release
 	for dir in *-linux*; do
 		tar -cvzf "$dir.tar.gz" "$dir"
 	done
-	rsync -avzr --progress *.zip *.tar.gz ranger@www.opennms.org:/var/www/sites/opennms.org/site/www/mattermost/
+
+	printf "Really rsync? [y/N] "
+	read DO_RSYNC
+
+	case $DO_RSYNC in
+		Y|y)
+			rsync -avzr --progress *.zip *.tar.gz ranger@www.opennms.org:/var/www/sites/opennms.org/site/www/mattermost/
+			;;
+		*)
+			"Fine then.  Skipping."
+			;;
+	esac
 popd dist
 
