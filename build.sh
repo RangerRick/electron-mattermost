@@ -35,7 +35,7 @@ pushd release
 			rsync -avzr --progress *.zip *.tar.gz ranger@www.opennms.org:/var/www/sites/opennms.org/site/www/mattermost/
 			;;
 		*)
-			"Fine then.  Skipping."
+			echo "Fine then. Skipping."
 			;;
 	esac
 popd dist
