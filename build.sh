@@ -3,6 +3,7 @@
 MYDIR=`dirname $0`
 TOPDIR=`cd $MYDIR; pwd`
 DISTDIR="$TOPDIR/dist"
+RELEASEDIR="$TOPDIR/release"
 APP="opennms-chat"
 APP_PATH="$DISTDIR/opennms-chat-darwin-x64/opennms-chat.app"
 RESULT_PATH="$HOME/Desktop/opennms-chat.pkg"
@@ -13,7 +14,7 @@ echo "* making sure dependencies are up-to-date"
 npm install
 
 echo "* cleaning $DISTDIR"
-sudo rm -rf "$DISTDIR"/*
+sudo rm -rf "$DISTDIR"/* "$RELEASEDIR"/*
 
 echo "* building"
 npm run package:all
