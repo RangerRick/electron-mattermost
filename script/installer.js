@@ -22,7 +22,7 @@ function getInstallerConfig(arch) {
   const outPath = path.join(rootPath, 'release');
 
   return Promise.resolve({
-    appDirectory: path.join(outPath, `Mattermost-win32-${arch}`),
+    appDirectory: path.join(outPath, `OpenNMS Chat-win32-${arch}`),
     authors: 'Mattermost, Inc.',
     owners: 'Mattermost, Inc.',
     iconUrl: 'https://raw.githubusercontent.com/mattermost/desktop/master/resources/icon.ico',
@@ -32,7 +32,7 @@ function getInstallerConfig(arch) {
     setupExe: `mattermost-setup-${arch}.exe`,
     setupIcon: path.join(rootPath, 'resources', 'icon.ico'),
     skipUpdateIcon: true,
-    exe: 'Mattermost.exe'
+    exe: 'OpenNMS Chat.exe'
   });
 }
 

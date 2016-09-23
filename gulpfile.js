@@ -223,8 +223,8 @@ function makePackage(platform, arch, callback) {
     }
     else {
       if (platform === 'linux' || platform === 'all') {
-        const dest_32 = 'release/Mattermost-linux-ia32';
-        const dest_64 = 'release/Mattermost-linux-x64';
+        const dest_32 = 'release/' + packageJson.productName + '-linux-ia32';
+        const dest_64 = 'release/' + packageJson.productName + '-linux-x64';
         fs.createReadStream('resources/icon.png').pipe(fs.createWriteStream(`${dest_32}/icon.png`));
         fs.createReadStream('resources/icon.png').pipe(fs.createWriteStream(`${dest_64}/icon.png`));
         fs.createReadStream('resources/linux/create_desktop_file.sh')
