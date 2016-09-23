@@ -10,6 +10,8 @@ RESULT_PATH="$HOME/Desktop/opennms-chat.pkg"
 
 INSTALLER_KEY="Developer ID Installer: The OpenNMS Group, Inc. (N7VNY4MNDW)"
 
+VERSION=$(node -e "p = require('./package.json'); console.log(p.version);")
+
 echo "* making sure dependencies are up-to-date"
 npm install
 
@@ -22,10 +24,10 @@ npm run package:all
 echo "* creating dist archive(s)"
 pushd release
 	for dir in *-darwin* *-win32*; do
-		zip -9 -r "$dir.zip" "$dir"
+		zip -9 -r "${dir}-${VERSION}.zip" "$dir"
 	done
 	for dir in *-linux*; do
-		tar -cvzf "$dir.tar.gz" "$dir"
+		tar -cvzf "${dir}-${VERSION}.tar.gz" "$dir"
 	done
 
 	printf "Really rsync? [y/N] "
@@ -33,7 +35,7 @@ pushd release
 
 	case $DO_RSYNC in
 		Y|y)
-			rsync -avzr --progress *.zip *.tar.gz ranger@www.opennms.org:/var/www/sites/opennms.org/site/www/mattermost/
+			rsync -avzr --progress *.zip *.tar.gz ranger@www.opennms.org:/var/www/html/mattermost/
 			;;
 		*)
 			echo "Fine then. Skipping."
