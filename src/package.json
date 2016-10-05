@@ -2,7 +2,7 @@
   "name": "opennms-chat",
   "productName": "OpenNMS Chat",
   "desktopName": "OpenNMS.desktop",
-  "version": "3.4.0+1.0.0",
+  "version": "3.4.1+1.0.0",
   "description": "Mattermost desktop application for OpenNMS chat",
   "main": "main.js",
   "author": {
