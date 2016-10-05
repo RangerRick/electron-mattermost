@@ -19,9 +19,9 @@
     "electron-context-menu": "^0.6.0",
     "electron-squirrel-startup": "^1.0.0",
     "os-locale": "^1.4.0",
-    "react": "^15.3.0",
-    "react-bootstrap": "~0.30.3",
-    "react-dom": "^15.3.0",
-    "yargs": "^5.0.0"
+    "react": "^15.3.2",
+    "react-bootstrap": "~0.30.5",
+    "react-dom": "^15.3.2",
+    "yargs": "^6.0.0"
   }
 }
